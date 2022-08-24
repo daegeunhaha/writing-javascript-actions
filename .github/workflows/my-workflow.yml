@@ -23,3 +23,9 @@ jobs:
         with:
           repo-token: ${{secrets.GITHUB_TOKEN}}
           joke: ${{steps.jokes.outputs.joke-output}}
+
+      - name: create-issue2
+        uses: ./.github/actions/remove_node_modules_test
+        with:
+          repo-token: ${{secrets.GITHUB_TOKEN}}
+          joke: ${{steps.jokes.outputs.joke-output}}
